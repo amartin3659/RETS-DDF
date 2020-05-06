@@ -27,19 +27,19 @@ async function search(callback, id) {
     }
 }
 
-async function object() {
+async function object(callback, id, type) {
     try {
-        const result = await client.getObjects({
+        await client.getObjects({
             resource: 'Property',
-            type: 'Photo',
-            contentId: '21738082',
-            objectId: '3',
+            type: `${type}`,
+            contentId: `${id}`,
+            objectId: '1',
             withLocation: false
         }).then(result => {
-            console.log(result);
+            callback(null, result)
         });
     } catch (err) {
-        console.log(err);
+        callback(err, null);
     }
 }
 
