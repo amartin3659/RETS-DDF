@@ -1,11 +1,7 @@
 * replyCode
----
 * replyTest
----
 * statusMessage
----
 * extra
----
 * records
     * _XmlAttributes
         * ID
